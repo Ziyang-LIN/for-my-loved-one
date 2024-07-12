@@ -1,5 +1,6 @@
 /* styles.css */
 
+/* Global body style */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #333;
@@ -8,6 +9,7 @@ body {
     background-color: #f9f9f9;
 }
 
+/* Header styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -154,4 +156,71 @@ footer a {
 
 footer a:hover {
     color: #666;
+}
+
+/* CSS for Biography Page */
+.bio {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bio-image {
+    display: block;
+    max-width: 80%;
+    height: auto;
+    border-radius: 30px;
+    margin: 20px 0 20px auto; /* Align to the right */
+    float: right;
+}
+
+.bio-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.grad-date {
+    float: right;
+    font-weight: normal;
+    color: #666;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #e5e5e5;
+    margin: 40px 0;
+}
+
+.work-experience {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.experience-logo {
+    align-self: flex-start;
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 15px;
+    position: relative;
+    top: 20px;
+    left: 0px;
+}
+
+.work-duration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 0.8em;
+    color: #666;
+    margin-left: 100px;
+    margin-bottom: -5px;
 }
