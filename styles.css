@@ -93,8 +93,8 @@ main {
 
 .overlay {
     position: absolute;
-    bottom: 10%; /* Moved title down to be 10% from the bottom */
-    right: 15%;
+    top: 12%; /* Moved title down to be 10% from the bottom */
+    right: 5%;
     color: #fff;
     padding: 5px 10px;
     font-size: 1.8em; /* Increased font size */
