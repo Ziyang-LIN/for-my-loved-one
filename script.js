@@ -10,3 +10,6 @@ function moveSlides(n) {
 
 document.querySelector('.prev').addEventListener('click', () => moveSlides(-1));
 document.querySelector('.next').addEventListener('click', () => moveSlides(1));
+
+// Ensure slides are correctly initialized
+window.addEventListener('load', () => moveSlides(0));
