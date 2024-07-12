@@ -224,3 +224,90 @@ hr {
     margin-left: 100px;
     margin-bottom: -5px;
 }
+
+/* CSS for Contact Page */
+.contact-container {
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+    gap: 40px;
+}
+.left-section {
+    flex: 0 0 50%; /* 60% width */
+}
+.right-section {
+    flex: 0 0 40%; /* 40% width */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align content to the right */
+    text-align: right; /* Align text to the right */
+}
+.tight-spacing {
+    line-height: 1.2; /* Adjust line height here */
+}
+.contact-item {
+    margin-bottom: 21px;
+}
+.last-item {
+    margin-bottom: 21px; /* Additional margin for the last item */
+}
+.contact-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 300;
+}
+.contact-item a:hover {
+    color: #666;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    font-size: 1em;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    width: 100%;
+}
+.contact-form button {
+    padding: 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #d8ccdb;
+    color: white;
+    cursor: pointer;
+    width: 150px;
+}
+.contact-form button:hover {
+    background-color: #d1b4d9;
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+.social-icons a {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    background-color: #d8ccdb;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 50px; /* Ensures the background circle is centered */
+    font-size: 1.5em;
+    text-decoration: none;
+}
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle; /* Ensures the icon is vertically centered */
+}
+.social-icons a:hover {
+    background-color: #d1b4d9;
+}
