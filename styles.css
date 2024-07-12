@@ -228,13 +228,13 @@ hr {
 /* CSS for Contact Page */
 .contact-container {
     display: flex;
-    max-width: 1000px;
+    max-width: 900px;
     margin: auto;
     padding: 40px 20px;
     gap: 40px;
 }
 .left-section {
-    flex: 0 0 50%; /* 60% width */
+    flex: 10 0 50%; /* 60% width */
 }
 .right-section {
     flex: 0 0 40%; /* 40% width */
