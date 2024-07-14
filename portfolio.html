@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, input, textarea {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 300; /* Thinner font */
+            word-spacing: 0.1em; /* Increased space between words */
+            letter-spacing: 0.02em; /* Increased space between characters */
+        }
+        h1, h2, strong {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 400;
+            word-spacing: 0.1em;
+            letter-spacing: 0.12em;
+        }
+        .content {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .project {
+            margin: 20px auto;
+            width: 80%;
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInSlideUp 1s ease-out forwards;
+        }
+        .project img {
+            width: 100%;
+            height: auto;
+        }
+        .project-number {
+            font-size: 40px;
+            color: #8a8a8a;
+            font-weight: bold;
+            position: absolute;
+        }
+        .project1 {
+            margin-top: 50px;
+            margin-left: 0px;
+            animation-delay: 0s;
+        }
+        .project2 {
+            margin-top: 50px;
+            margin-right: 0px;
+            animation-delay: 0.3s;
+        }
+        .project3 {
+            margin-top: 50px;
+            margin-left: 0px;
+            animation-delay: 0.6s;
+        }
+        .project4 {
+            margin-top: 50px;
+            margin-right: 0px;
+            animation-delay: 0.9s;
+        }
+        /* Individual styles for each project number */
+        .number1 {
+            top: 0px;
+            right: -75px;
+        }
+        .number2 {
+            top: 0px;
+            left: -75px;
+        }
+        .number3 {
+            top: 0px;
+            right: -75px;
+        }
+        .number4 {
+            top: 0px;
+            left: -75px;
+        }
+        /* Animation keyframes */
+        @keyframes fadeInSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Portfolio Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biography.html">Biography</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <h1>CONTENTS</h1>
+            <div class="project project1">
+                <span class="project-number number1">01.</span>
+                <a href="project1.html">
+                    <img src="images/project1-1.png" alt="Project 1">
+                </a>
+            </div>
+            <div class="project project2">
+                <span class="project-number number2">02.</span>
+                <a href="project2.html">
+                    <img src="images/project2-1.png" alt="Project 2">
+                </a>
+            </div>
+            <div class="project project3">
+                <span class="project-number number3">03.</span>
+                <a href="project3.html">
+                    <img src="images/project3-1.png" alt="Project 3">
+                </a>
+            </div>
+            <div class="project project4">
+                <span class="project-number number4">04.</span>
+                <a href="project4.html">
+                    <img src="images/project4-1.png" alt="Project 4">
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="https://www.instagram.com/emmluvu2?igshid=MTc1b29tdjN6cmR3dg==" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/emily-zhang-9607201b3/" target="_blank">LinkedIn</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </footer>
+    <script>
+        window.addEventListener('load', function() {
+            const projects = document.querySelectorAll('.project');
+            projects.forEach((project, index) => {
+                project.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+    </script>
+</body>
+</html>
