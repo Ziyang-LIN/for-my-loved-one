@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - Stair is Foul, and Foul is Stair</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 300; /* Thinner font */
+            word-spacing: 0.1em; /* Increased space between words */
+            letter-spacing: 0.02em; /* Increased space between characters */
+        }
+        h1, h2, strong {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 400;
+            word-spacing: 0.1em;
+            letter-spacing: 0.07em;
+        }
+        .main-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 80%;
+            margin: 20px auto;
+        }
+        .main-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            border-radius: 30px;
+        }
+        .project-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .project-info h1 {
+            font-size: 24px;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        .project-info p {
+            font-size: 12px;
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+        .project-brief-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 80%;
+            margin: 20px auto;
+        }
+        .project-brief-title {
+            align-self: flex-start;
+            margin-top: 20px;
+            word-spacing: 0.2em; /* Increased space between words */
+            letter-spacing: 0.15em; /* Increased space between characters */
+        }
+        .project-brief {
+            width: 100%;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .project-brief p {
+            margin-bottom: 10px;
+        }
+        footer {
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+        header {
+            width: 100%;
+        }
+        .copyright {
+            position: absolute;
+            bottom: 27px;
+            right: 15px;
+            font-size: 12px;
+            color: #8a8a8a;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Portfolio Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biography.html">Biography</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="project-info">
+                <h1>POOM</h1>
+                <p><strong>Location:</strong> Siteless<br>
+                   <strong>Date:</strong> 2022<br>
+                   <strong>Type:</strong> Individual Project<br>
+                   <strong>Supervised by:</strong> Faye Song
+               </p>
+            </div>
+            <div class="main-image">
+                <img src="images/project2.png" alt="Main Project Image">
+            </div>
+        </div>
+        <div class="project-brief-container">
+            <h2 class="project-brief-title">PROJECT BRIEF</h2>
+            <div class="project-brief">
+                <p>Nestled within a community neighbourhood, this experiential children’s bookstore stands as an emblem of the timeless essence of books. This unique space is designed around the intriguing question: “What makes ‘a book’ a book?”. It champions the ethos of ‘learning by experiencing’, aligning perfectly with children’s innate curiosity, and promoting exploration.</p>
+                <p>In communities valuing education and shared experiences, this bookstore becomes invaluable. It provides more than just children’s literature; it offers a space for collective growth, exploration, and bonding. Such neighbourhoods, filled with young families and educators, will find the bookstore a central hub for nurturing intellectual development.</p>
+                <p>The relationship between the community and the bookstore is symbiotic. While the bookstore seeds a love for reading and discovery, the community reciprocates with unwavering support and a constant influx of inquisitive young minds. This mutual relationship ensures the bookstore’s relevance and continued evolution, making it a vital asset to the community it serves.</p>
+                <p>In essence, the Experiential Children’s Bookstore is both a tribute to the power of books and a foundational pillar for communities prioritizing learning and togetherness.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="https://www.instagram.com/emmluvu2?igshid=MTc1b29tdjN6cmR3dg==" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/emily-zhang-9607201b3/" target="_blank">LinkedIn</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+        <div class="copyright">
+            Copyright &copy; 2024, Emily Zhang
+        </div>
+    </footer>
+</body>
+</html>

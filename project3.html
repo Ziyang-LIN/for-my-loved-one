@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - Stair is Foul, and Foul is Stair</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 300; /* Thinner font */
+            word-spacing: 0.1em; /* Increased space between words */
+            letter-spacing: 0.02em; /* Increased space between characters */
+        }
+        h1, h2, strong {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 400;
+            word-spacing: 0.1em;
+            letter-spacing: 0.07em;
+        }
+        .main-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 80%;
+            margin: 20px auto;
+        }
+        .main-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            border-radius: 30px;
+        }
+        .project-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .project-info h1 {
+            font-size: 24px;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        .project-info p {
+            font-size: 12px;
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+        .project-brief-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 80%;
+            margin: 20px auto;
+        }
+        .project-brief-title {
+            align-self: flex-start;
+            margin-top: 20px;
+            word-spacing: 0.2em; /* Increased space between words */
+            letter-spacing: 0.15em; /* Increased space between characters */
+        }
+        .project-brief {
+            width: 100%;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .project-brief p {
+            margin-bottom: 10px;
+        }
+        footer {
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+        header {
+            width: 100%;
+        }
+        .copyright {
+            position: absolute;
+            bottom: 27px;
+            right: 15px;
+            font-size: 12px;
+            color: #8a8a8a;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Portfolio Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biography.html">Biography</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="project-info">
+                <h1>Grandfather’s Harmonica</h1>
+                <p><strong>Location:</strong> Siteless<br>
+                   <strong>Date:</strong> 2023<br>
+                   <strong>Type:</strong> Individual Project<br>
+                   <strong>Supervised by:</strong> Ercument Gorgul, Faye Song
+               </p>
+            </div>
+            <div class="main-image">
+                <img src="images/project3.png" alt="Main Project Image">
+            </div>
+        </div>
+        <div class="project-brief-container">
+            <h2 class="project-brief-title">PROJECT BRIEF</h2>
+            <div class="project-brief">
+                <p>In the cultural context of my ethnicity, there exists a prevalent sentiment among the elderly, especially those raised in small towns or villages, that associates home with a sanctuary of comfort and security. This notion, encapsulated in the phrase ‘I am where home is,’ profoundly restricted my grandfather, a lover of the harmonica, with whom I shared a special bond.</p>
+                <p>Envisioning the future, I foresee a paradigm shift in the concept of dwelling spaces — from static structures to mobile, modular homes. I anticipate the hot air balloon, reimagined through advanced engineering, becoming a primary mode of transport, surpassing the conventional reliance on automobiles. Central to this conceptual design is the innovative application of Artificial Intelligence. This project explores the potential of AI in augmenting the architectural and spatial design process, testing how AI can assist designers in creating more intuitive and responsive living spaces.</p>
+                <p>This design is underpinned by high-tech advancements, aiming to provide adaptable and comfortable living spaces. In this envisioned future, the adage transforms to ‘Home is where I am,’ enabling individuals like my grandfather to traverse the globe without departing from the familiarity and solace of their homes. This mobile home concept is not just a solution to physical mobility but a realization of dreams.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="https://www.instagram.com/emmluvu2?igshid=MTc1b29tdjN6cmR3dg==" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/emily-zhang-9607201b3/" target="_blank">LinkedIn</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+        <div class="copyright">
+            Copyright &copy; 2024, Emily Zhang
+        </div>
+    </footer>
+</body>
+</html>
