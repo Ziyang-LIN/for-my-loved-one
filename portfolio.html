@@ -18,65 +18,7 @@
             word-spacing: 0.1em;
             letter-spacing: 0.12em;
         }
-        .content {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .project {
-            margin: 20px auto;
-            width: 80%;
-            position: relative;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInSlideUp 1s ease-out forwards;
-        }
-        .project img {
-            width: 100%;
-            height: auto;
-        }
-        .project-number {
-            font-size: 40px;
-            color: #8a8a8a;
-            font-weight: bold;
-            position: absolute;
-        }
-        .project1 {
-            margin-top: 50px;
-            margin-left: 0px;
-            animation-delay: 0s;
-        }
-        .project2 {
-            margin-top: 50px;
-            margin-right: 0px;
-            animation-delay: 0.3s;
-        }
-        .project3 {
-            margin-top: 50px;
-            margin-left: 0px;
-            animation-delay: 0.6s;
-        }
-        .project4 {
-            margin-top: 50px;
-            margin-right: 0px;
-            animation-delay: 0.9s;
-        }
-        /* Individual styles for each project number */
-        .number1 {
-            top: 0px;
-            right: -75px;
-        }
-        .number2 {
-            top: 0px;
-            left: -75px;
-        }
-        .number3 {
-            top: 0px;
-            right: -75px;
-        }
-        .number4 {
-            top: 0px;
-            left: -75px;
-        }
+
         /* Animation keyframes */
         @keyframes fadeInSlideUp {
             0% {
@@ -87,6 +29,16 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
+        footer {
+            position: relative;
+        }
+        .copyright {
+            position: absolute;
+            bottom: 27px;
+            right: 15px;
+            font-size: 12px;
+            color: #8a8a8a;
         }
     </style>
 </head>
@@ -139,6 +91,9 @@
             <li><a href="https://www.linkedin.com/in/emily-zhang-9607201b3/" target="_blank">LinkedIn</a></li>
             <li><a href="#">Twitter</a></li>
         </ul>
+        <div class="copyright">
+            Copyright &copy; 2024, Emily Zhang
+        </div>
     </footer>
     <script>
         window.addEventListener('load', function() {

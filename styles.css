@@ -88,7 +88,7 @@ main {
 .slide img {
     width: 100%;
     height: auto;
-    border-radius: 15px; /* Added round edges */
+    border-radius: 40px; /* Added round edges */
 }
 
 .overlay {
@@ -312,4 +312,65 @@ hr {
 }
 .social-icons a:hover {
     background-color: #d1b4d9;
+}
+
+/* CSS for Portfolio Page */
+.content {
+    text-align: center;
+    margin: 20px 0;
+}
+.project {
+    margin: 20px auto;
+    width: 80%;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInSlideUp 1s ease-out forwards;
+}
+.project img {
+    width: 100%;
+    height: auto;
+}
+.project-number {
+    font-size: 40px;
+    color: #8a8a8a;
+    font-weight: bold;
+    position: absolute;
+}
+.project1 {
+    margin-top: 50px;
+    margin-left: 0px;
+    animation-delay: 0s;
+}
+.project2 {
+    margin-top: 50px;
+    margin-right: 0px;
+    animation-delay: 0.3s;
+}
+.project3 {
+    margin-top: 50px;
+    margin-left: 0px;
+    animation-delay: 0.6s;
+}
+.project4 {
+    margin-top: 50px;
+    margin-right: 0px;
+    animation-delay: 0.9s;
+}
+/* Individual styles for each project number */
+.number1 {
+    top: 0px;
+    right: -75px;
+}
+.number2 {
+    top: 0px;
+    left: -75px;
+}
+.number3 {
+    top: 0px;
+    right: -75px;
+}
+.number4 {
+    top: 0px;
+    left: -75px;
 }
