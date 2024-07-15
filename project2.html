@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1 - Stair is Foul, and Foul is Stair</title>
+    <title>Project 2 - POOM</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -11,6 +11,11 @@
             font-weight: 300; /* Thinner font */
             word-spacing: 0.1em; /* Increased space between words */
             letter-spacing: 0.02em; /* Increased space between characters */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         h1, h2, strong {
             font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -18,11 +23,19 @@
             word-spacing: 0.1em;
             letter-spacing: 0.07em;
         }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
         .main-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
-            width: 80%;
+            width: 90%;
+            max-width: 1200px; /* Limit maximum width */
             margin: 20px auto;
         }
         .main-image img {
@@ -53,7 +66,8 @@
             justify-content: center;
             flex-direction: column;
             align-items: flex-start;
-            width: 80%;
+            width: 90%;
+            max-width: 1000px; /* Limit maximum width */
             margin: 20px auto;
         }
         .project-brief-title {
@@ -70,22 +84,102 @@
         .project-brief p {
             margin-bottom: 10px;
         }
+        .additional-images {
+            position: relative;
+            width: 90%;
+            max-width: 1200px; /* Limit maximum width */
+            margin: 40px auto;
+            height: 2840px; /* Adjust height to fit all images */
+        }
+        .additional-images div {
+            position: absolute;
+            width: 85%;
+            transition: opacity 0.5s ease; /* Transition for opacity */
+        }
+        .additional-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+        .number1, .number2, .number3, .number4, .number5, .number6, .number7 {
+            font-size: 60px;
+            color: #8a8a8a;
+            font-weight: bold;
+            position: absolute;
+        }
+        .number1 {
+            top: 30px;
+            right: -105px;
+        }
+        .number2 {
+            top: 100px;
+            left: -105px;
+        }
+        .number3 {
+            top: 100px;
+            right: -105px;
+        }
+        .number4 {
+            top: 100px;
+            left: -105px;
+        }
+        .number5 {
+            top: 100px;
+            right: -105px;
+        }
+        .number6 {
+            top: 100px;
+            left: -105px;
+        }
+        .number7 {
+            top: 100px;
+            right: -105px;
+        }
+        .img1 {
+            top: 0;
+            left: 0;
+        }
+        .img2 {
+            top: 460px;
+            right: 0;
+        }
+        .img3 {
+            top: 920px;
+            left: 0;
+        }
+        .img4 {
+            top: 1380px;
+            right: 0;
+        }
+        .img5 {
+            top: 1840px;
+            left: 0;
+        }
+        .img6 {
+            top: 2300px;
+            right: 0;
+        }
+        .img7 {
+            top: 2760px;
+            left: 0;
+        }
+        .additional-images .faded {
+            opacity: 0.4; /* Reduced opacity for faded images */
+        }
         footer {
             width: 100%;
             text-align: center;
+            padding: 20px 0;
+            background-color: #f9f9f9;
             position: relative;
-        }
-        header {
-            width: 100%;
         }
         .copyright {
             position: absolute;
             bottom: 27px;
-            right: 15px;
+            right: 30px;
             font-size: 12px;
             color: #8a8a8a;
         }
-
         @keyframes fadeIn {
             to {
                 opacity: 1;
@@ -130,6 +224,32 @@
                 <p>In essence, the Experiential Children’s Bookstore is both a tribute to the power of books and a foundational pillar for communities prioritizing learning and togetherness.</p>
             </div>
         </div>
+        <section class="additional-images">
+            <div class="img1">
+                <img src="images/project2-2.png" alt="Project Image 2">
+                <span class="number1">01</span>
+            </div>
+            <div class="img2">
+                <span class="number2">02</span>
+                <img src="images/project2-3.png" alt="Project Image 3">
+            </div>
+            <div class="img3">
+                <img src="images/project2-4.png" alt="Project Image 4">
+                <span class="number3">03</span>
+            </div>
+            <div class="img4">
+                <span class="number4">04</span>
+                <img src="images/project2-5.png" alt="Project Image 5">
+            </div>
+            <div class="img5">
+                <img src="images/project2-6.png" alt="Project Image 6">
+                <span class="number5">05</span>
+            </div>
+            <div class="img6">
+                <span class="number6">06</span>
+                <img src="images/project2-7.png" alt="Project Image 7">
+            </div>
+        </section>
     </main>
     <footer>
         <ul>
@@ -137,9 +257,26 @@
             <li><a href="https://www.linkedin.com/in/emily-zhang-9607201b3/" target="_blank">LinkedIn</a></li>
             <li><a href="#">Twitter</a></li>
         </ul>
-        <div class="copyright">
+        <p class="copyright">
             Copyright &copy; 2024, Emily Zhang
-        </div>
+        </p>
     </footer>
+    <script>
+        document.addEventListener('scroll', function() {
+            const images = document.querySelectorAll('.additional-images div');
+            const screenCenter = window.innerHeight / 2;
+            
+            images.forEach(img => {
+                const rect = img.getBoundingClientRect();
+                const imgCenter = rect.top + (rect.height / 2);
+                
+                if (Math.abs(imgCenter - screenCenter) < rect.height / 2) {
+                    img.style.opacity = 1;
+                } else {
+                    img.style.opacity = 0.4;
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -11,6 +11,11 @@
             font-weight: 300; /* Thinner font */
             word-spacing: 0.1em; /* Increased space between words */
             letter-spacing: 0.02em; /* Increased space between characters */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         h1, h2, strong {
             font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -18,11 +23,19 @@
             word-spacing: 0.1em;
             letter-spacing: 0.07em;
         }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
         .main-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
-            width: 80%;
+            width: 90%;
+            max-width: 1200px; /* Limit maximum width */
             margin: 20px auto;
         }
         .main-image img {
@@ -53,7 +66,8 @@
             justify-content: center;
             flex-direction: column;
             align-items: flex-start;
-            width: 80%;
+            width: 90%;
+            max-width: 1000px; /* Limit maximum width */
             margin: 20px auto;
         }
         .project-brief-title {
@@ -70,22 +84,102 @@
         .project-brief p {
             margin-bottom: 10px;
         }
+        .additional-images {
+            position: relative;
+            width: 90%;
+            max-width: 1200px; /* Limit maximum width */
+            margin: 40px auto;
+            height: 3300px; /* Adjust height to fit all images */
+        }
+        .additional-images div {
+            position: absolute;
+            width: 85%;
+            transition: opacity 0.5s ease; /* Transition for opacity */
+        }
+        .additional-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+        .number1, .number2, .number3, .number4, .number5, .number6, .number7 {
+            font-size: 60px;
+            color: #8a8a8a;
+            font-weight: bold;
+            position: absolute;
+        }
+        .number1 {
+            top: 30px;
+            right: -105px;
+        }
+        .number2 {
+            top: 100px;
+            left: -105px;
+        }
+        .number3 {
+            top: 100px;
+            right: -105px;
+        }
+        .number4 {
+            top: 100px;
+            left: -105px;
+        }
+        .number5 {
+            top: 100px;
+            right: -105px;
+        }
+        .number6 {
+            top: 100px;
+            left: -105px;
+        }
+        .number7 {
+            top: 100px;
+            right: -105px;
+        }
+        .img1 {
+            top: 0;
+            left: 0;
+        }
+        .img2 {
+            top: 460px;
+            right: 0;
+        }
+        .img3 {
+            top: 920px;
+            left: 0;
+        }
+        .img4 {
+            top: 1380px;
+            right: 0;
+        }
+        .img5 {
+            top: 1840px;
+            left: 0;
+        }
+        .img6 {
+            top: 2300px;
+            right: 0;
+        }
+        .img7 {
+            top: 2760px;
+            left: 0;
+        }
+        .additional-images .faded {
+            opacity: 0.4; /* Reduced opacity for faded images */
+        }
         footer {
             width: 100%;
             text-align: center;
+            padding: 20px 0;
+            background-color: #f9f9f9;
             position: relative;
-        }
-        header {
-            width: 100%;
         }
         .copyright {
             position: absolute;
             bottom: 27px;
-            right: 15px;
+            right: 30px;
             font-size: 12px;
             color: #8a8a8a;
         }
-
         @keyframes fadeIn {
             to {
                 opacity: 1;
@@ -110,25 +204,54 @@
     <main>
         <div class="main-container">
             <div class="project-info">
-                <h1>"Stair is Foul, and Foul is Stair"</h1>
-                <p><strong>Location:</strong> Siteless<br>
+                <h1>Revisiting The Biome-Bones</h1>
+                <p><strong>Location:</strong> Toronto, Canada<br>
                    <strong>Date:</strong> 2023<br>
                    <strong>Type:</strong> Individual Project<br>
-                   <strong>Supervised by:</strong> Ercument Gorgul, Faye Song
+                   <strong>Supervised by:</strong> Faye Song
                </p>
             </div>
             <div class="main-image">
-                <img src="images/project1.png" alt="Main Project Image">
+                <img src="images/project4.png" alt="Main Project Image">
             </div>
         </div>
         <div class="project-brief-container">
             <h2 class="project-brief-title">PROJECT BRIEF</h2>
             <div class="project-brief">
-                <p>The Macbeth stage design, situated within an expansive park or open area, challenges traditional theatrical conventions by emphasizing integration with nature and fostering a novel, immersive audience experience. This portable stage is conceived as a transformative spatial entity: its structural components use the fundamental ‘stair’ to reassemble and simulate various architectural elements such as doors, columns, and roofs.</p>
-                <p>In essence, the design hinges on the versatility of a singular building block —the stair— that can be endlessly manipulated. This adaptability ensures that the stage’s appearance can differ for individual Acts and Scenes, introducing a dynamic variability between performances. The stage’s foundation on a rotating plate further augments its spatial dynamism, granting spectators diverse viewing perspectives. Additionally, the chosen construction material is optimized for projections, facilitating seamless integration of visuals and sceneries onto the structure itself.</p>
-                <p>This design concept, by bridging performance and environment, posits a visionary approach to theatre. It not only encourages flexibility in stage presentation but also promotes a harmonious interplay between man-made structures and the natural world, redefining audience experience within an architectural framework.</p>
+                <p>The specialized roles of dogs reflect the environments from which they originate. Retrievers, bred in wetlands and coastal regions, excel in waterfowl retrieval due to their aquatic prowess. Herding dogs, from grasslands and highlands, possess the agility to manage livestock. Hunting breeds, developed in forested regions, are skilled in tracking and flushing out game. Sled dogs, hailing from arctic tundra regions, are robust and insulated for endurance in severe cold. Each breed’s evolution within these niches highlights the symbiosis between human needs and canine capabilities.</p>
+                <p>In the pursuit of designing a canine daycare facility that prioritizes the behavioral preferences and needs of dogs, the project draws inspiration from their diverse evolutionary origins across various biomes. This design concept leverages extensive research on the natural behaviors exhibited by dogs in accordance with their geographical biomes of origin. By utilizing this valuable behavioral data as a guiding framework, the daycare facility endeavors to provide an environment that harmonizes with the intrinsic inclinations of dogs, thereby fostering a profound sense of joy and contentment. The overarching goal is to create a space where dogs can authentically engage in their natural behaviors, ensuring a fulfilling and pleasurable experience during their time away from their busy-working parents.</p>
             </div>
         </div>
+        <section class="additional-images">
+            <div class="img1">
+                <img src="images/project4-2.png" alt="Project Image 2">
+                <span class="number1">01</span>
+            </div>
+            <div class="img2">
+                <span class="number2">02</span>
+                <img src="images/project4-3.png" alt="Project Image 3">
+            </div>
+            <div class="img3">
+                <img src="images/project4-4.png" alt="Project Image 4">
+                <span class="number3">03</span>
+            </div>
+            <div class="img4">
+                <span class="number4">04</span>
+                <img src="images/project4-5.png" alt="Project Image 5">
+            </div>
+            <div class="img5">
+                <img src="images/project4-6.png" alt="Project Image 6">
+                <span class="number5">05</span>
+            </div>
+            <div class="img6">
+                <span class="number6">06</span>
+                <img src="images/project4-7.png" alt="Project Image 7">
+            </div>
+            <div class="img7">
+                <img src="images/project4-8.png" alt="Project Image 8">
+                <span class="number7">07</span>
+            </div>
+        </section>
     </main>
     <footer>
         <ul>
@@ -136,9 +259,26 @@
             <li><a href="https://www.linkedin.com/in/emily-zhang-9607201b3/" target="_blank">LinkedIn</a></li>
             <li><a href="#">Twitter</a></li>
         </ul>
-        <div class="copyright">
+        <p class="copyright">
             Copyright &copy; 2024, Emily Zhang
-        </div>
+        </p>
     </footer>
+    <script>
+        document.addEventListener('scroll', function() {
+            const images = document.querySelectorAll('.additional-images div');
+            const screenCenter = window.innerHeight / 2;
+            
+            images.forEach(img => {
+                const rect = img.getBoundingClientRect();
+                const imgCenter = rect.top + (rect.height / 2);
+                
+                if (Math.abs(imgCenter - screenCenter) < rect.height / 2) {
+                    img.style.opacity = 1;
+                } else {
+                    img.style.opacity = 0.4;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
