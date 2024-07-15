@@ -174,14 +174,34 @@ footer a:hover {
     }
 }
 
-@keyframes slideIn {
+@keyframes fadeInLeft {
     from {
         opacity: 0;
-        transform: translateX(50%);
+        transform: translateX(-20px);
     }
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
@@ -267,38 +287,49 @@ hr {
     padding: 40px 20px;
     gap: 40px;
 }
+
 .left-section {
     flex: 10 0 50%; /* 60% width */
+    animation: fadeInLeft 1.5s ease-in-out;
 }
+
 .right-section {
     flex: 0 0 40%; /* 40% width */
     display: flex;
     flex-direction: column;
     align-items: flex-end; /* Align content to the right */
     text-align: right; /* Align text to the right */
+    animation: fadeInRight 1.5s ease-in-out;
 }
+
 .tight-spacing {
     line-height: 1.2; /* Adjust line height here */
 }
+
 .contact-item {
     margin-bottom: 21px;
 }
+
 .last-item {
     margin-bottom: 21px; /* Additional margin for the last item */
 }
+
 .contact-item a {
     text-decoration: none;
     color: #333;
     font-weight: 300;
 }
+
 .contact-item a:hover {
     color: #666;
 }
+
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
+
 .contact-form input,
 .contact-form textarea {
     padding: 15px;
@@ -308,6 +339,7 @@ hr {
     width: 100%;
     border-radius: 15px;
 }
+
 .contact-form button {
     padding: 15px;
     font-size: 1em;
@@ -319,14 +351,17 @@ hr {
     width: 150px;
     border-radius: 15px;
 }
+
 .contact-form button:hover {
     background-color: #d1b4d9;
 }
+
 .social-icons {
     display: flex;
     gap: 15px;
     margin-top: 10px;
 }
+
 .social-icons a {
     display: inline-block;
     width: 55px;
@@ -339,11 +374,14 @@ hr {
     font-size: 1.5em;
     text-decoration: none;
 }
+
 .social-icons img {
     width: 24px;
     height: 24px;
     vertical-align: middle; /* Ensures the icon is vertically centered */
+    animation: fadeInUp 1s ease-in-out;
 }
+
 .social-icons a:hover {
     background-color: #d1b4d9;
 }
@@ -391,7 +429,6 @@ hr {
     margin-right: 0px;
     animation-delay: 0.9s;
 }
-/* Individual styles for each project number */
 .number1 {
     top: 0px;
     right: -75px;
